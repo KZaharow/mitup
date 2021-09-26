@@ -14,7 +14,7 @@ public class StreamTest {
 
     public static void main(String[] args) {
 
-        StopWatch sw = new StopWatch();
+      /*  StopWatch sw = new StopWatch();
         ArrayList<Long> timings = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             LongStream str = new StreamTest().getStr();
@@ -30,6 +30,6 @@ public class StreamTest {
             System.out.println(time + " ms");
         }
         Double collect = timings.stream().collect(Collectors.averagingInt(x -> x.intValue()));
-        System.out.println(collect + " ms");
+        System.out.println(collect + " ms");*/
     }
 }
