@@ -1,0 +1,179 @@
+Long single
+Single-stream time: 232 ms
+Single-stream time: 1 ms
+Single-stream time: 0 ms
+Single-stream time: 1 ms
+Single-stream time: 1 ms
+Single-stream time: 10 ms
+Single-stream time: 0 ms
+Single-stream time: 1 ms
+Single-stream time: 0 ms
+Single-stream time: 0 ms
+Single stream avg test time: 24.6 ms
+Single-stream time: 1 ms
+Single-stream time: 1 ms
+Single-stream time: 2 ms
+Single-stream time: 1 ms
+Single-stream time: 1 ms
+Single-stream time: 1 ms
+Single-stream time: 0 ms
+Single-stream time: 1 ms
+Single-stream time: 0 ms
+Single-stream time: 0 ms
+Single stream avg test time: 0.8 ms
+Single-stream time: 3 ms
+Single-stream time: 1 ms
+Single-stream time: 1 ms
+Single-stream time: 1 ms
+Single-stream time: 1 ms
+Single-stream time: 1 ms
+Single-stream time: 1 ms
+Single-stream time: 1 ms
+Single-stream time: 1 ms
+Single-stream time: 1 ms
+Single stream avg test time: 1.2 ms
+Single-stream time: 2 ms
+Single-stream time: 2 ms
+Single-stream time: 1 ms
+Single-stream time: 1 ms
+Single-stream time: 1 ms
+Single-stream time: 2 ms
+Single-stream time: 2 ms
+Single-stream time: 1 ms
+Single-stream time: 2 ms
+Single-stream time: 2 ms
+Single stream avg test time: 1.6 ms
+Single-stream time: 2 ms
+Single-stream time: 2 ms
+Single-stream time: 1 ms
+Single-stream time: 2 ms
+Single-stream time: 1 ms
+Single-stream time: 2 ms
+Single-stream time: 1 ms
+Single-stream time: 1 ms
+Single-stream time: 1 ms
+Single-stream time: 2 ms
+Single stream avg test time: 1.5 ms
+Single-stream time: 3 ms
+Single-stream time: 3 ms
+Single-stream time: 3 ms
+Single-stream time: 4 ms
+Single-stream time: 3 ms
+Single-stream time: 3 ms
+Single-stream time: 3 ms
+Single-stream time: 3 ms
+Single-stream time: 3 ms
+Single-stream time: 1 ms
+Single stream avg test time: 2.9 ms
+Single-stream time: 5 ms
+Single-stream time: 6 ms
+Single-stream time: 5 ms
+Single-stream time: 6 ms
+Single-stream time: 6 ms
+Single-stream time: 4 ms
+Single-stream time: 7 ms
+Single-stream time: 8 ms
+Single-stream time: 8 ms
+Single-stream time: 7 ms
+Single stream avg test time: 6.2 ms
+Single-stream time: 10 ms
+Single-stream time: 9 ms
+Single-stream time: 10 ms
+Single-stream time: 8 ms
+Single-stream time: 10 ms
+Single-stream time: 13 ms
+Single-stream time: 6 ms
+Single-stream time: 10 ms
+Single-stream time: 12 ms
+Single-stream time: 8 ms
+Single stream avg test time: 9.6 ms
+
+Long parallel
+Parallel-stream time: 16 ms
+Parallel-stream time: 0 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 0 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 0 ms
+Parallel stream avg test time: 2.2 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 2 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 2 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 2 ms
+Parallel-stream time: 2 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 1 ms
+Parallel stream avg test time: 1.4 ms
+Parallel-stream time: 0 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 0 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 0 ms
+Parallel-stream time: 0 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 0 ms
+Parallel stream avg test time: 0.5 ms
+Parallel-stream time: 0 ms
+Parallel-stream time: 2 ms
+Parallel-stream time: 0 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 0 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 1 ms
+Parallel stream avg test time: 0.8 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 2 ms
+Parallel-stream time: 2 ms
+Parallel-stream time: 2 ms
+Parallel-stream time: 2 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 1 ms
+Parallel stream avg test time: 1.4 ms
+Parallel-stream time: 2 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 2 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 2 ms
+Parallel-stream time: 2 ms
+Parallel-stream time: 1 ms
+Parallel-stream time: 3 ms
+Parallel-stream time: 2 ms
+Parallel-stream time: 2 ms
+Parallel stream avg test time: 1.8 ms
+Parallel-stream time: 3 ms
+Parallel-stream time: 3 ms
+Parallel-stream time: 5 ms
+Parallel-stream time: 3 ms
+Parallel-stream time: 4 ms
+Parallel-stream time: 5 ms
+Parallel-stream time: 3 ms
+Parallel-stream time: 4 ms
+Parallel-stream time: 3 ms
+Parallel-stream time: 2 ms
+Parallel stream avg test time: 3.5 ms
+Parallel-stream time: 6 ms
+Parallel-stream time: 34 ms
+Parallel-stream time: 11 ms
+Parallel-stream time: 11 ms
+Parallel-stream time: 8 ms
+Parallel-stream time: 9 ms
+Parallel-stream time: 6 ms
+Parallel-stream time: 5 ms
+Parallel-stream time: 7 ms
+Parallel-stream time: 7 ms
+Parallel stream avg test time: 10.4 ms
