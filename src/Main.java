@@ -39,7 +39,7 @@ public class Main {
             parallelTestPersonArrayList(t, new LinkedList<>());
         }
 
-        Files.write(Paths.get("result.txt"),  log.stream().map(i-> i.concat("\n")).toString().getBytes());
+        Files.write(Paths.get("result.txt"), log.toString().getBytes());
     }
 
     private static void testPersonArrayList(List<Person> t, List<Person> list) {
@@ -56,10 +56,11 @@ public class Main {
             sw.stop();
             long time = sw.getTime();
             timings.add(time);
-           log.add("Single-stream time [size=" + t.size() + "], " + time + " ms");
+            System.out.println(time);
+            log.add("Single-stream time [size=" + t.size() + "], " + time + " ms");
         }
         Double collect = timings.stream().collect(Collectors.averagingInt(x -> x.intValue()));
-       log.add("Single stream avg test time (size=" + t.size() + "), " + collect + " ms");
+        log.add("Single stream avg test time (size=" + t.size() + "), " + collect + " ms");
     }
 
     private static void parallelTestPersonArrayList(List<Person> t, List<Person> list) {
@@ -77,9 +78,10 @@ public class Main {
             sw.stop();
             long time = sw.getTime();
             timings.add(time);
-           log.add("Parallel-stream time [size=" + t.size() + "], " + time + " ms");
+            System.out.println(time);
+            log.add("Parallel-stream time [size=" + t.size() + "], " + time + " ms");
         }
         Double collect = timings.stream().collect(Collectors.averagingInt(x -> x.intValue()));
-       log.add("Parallel stream avg test time (size=" + t.size() + "), " + collect + " ms");
+        log.add("Parallel stream avg test time (size=" + t.size() + "), " + collect + " ms");
     }
 }
