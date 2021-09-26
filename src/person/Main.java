@@ -1,6 +1,6 @@
+package person;
+
 import org.apache.commons.lang.time.StopWatch;
-import person.Person;
-import person.PersonGenerator;
 
 import java.io.IOException;
 import java.nio.file.Files;
