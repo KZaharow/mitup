@@ -38,7 +38,8 @@ public class Main {
             testPersonArrayList(t, new LinkedList<>());
             parallelTestPersonArrayList(t, new LinkedList<>());
         }
-        Files.write(Paths.get("result.txt"),  log.toString().getBytes());
+
+        Files.write(Paths.get("result.txt"),  log.stream().map(i-> i.concat("\n")).toString().getBytes());
     }
 
     private static void testPersonArrayList(List<Person> t, List<Person> list) {
