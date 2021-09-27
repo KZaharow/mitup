@@ -19,7 +19,7 @@ public class Start {
 
     static {
 
-        long[] arr = {1000L, 10000L, 25000, 50000L, 100000L, 250000L, 500000L, 1000000L};
+        long[] arr = {1000L, 10000L, 25000, 50000L, 100000L, 250000L, 500000L, 1000000L, Long.MAX_VALUE / 10000};
         for (long l : arr) {
             ArrayList<LongStream> longStreams = new ArrayList<>();
             for (long i = 0; i < 10; i++) {
