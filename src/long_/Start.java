@@ -19,7 +19,7 @@ public class Start {
 
     static {
 
-        long[] arr = {1000L, 10000L, 25000, 50000L, 100000L, 250000L, 500000L, 1000000L, Long.MAX_VALUE / 10000};
+        long[] arr = {1000L, 10000L, 25000, 50000L, 100000L, 250000L, 500000L, 1000000L, Integer.MAX_VALUE};
         for (long l : arr) {
             ArrayList<LongStream> longStreams = new ArrayList<>();
             for (long i = 0; i < 10; i++) {
@@ -70,7 +70,7 @@ public class Start {
             stream
                     .filter(x -> x % 2 == 0)
                     .map(x -> x * 2)
-                    .count();
+                    .max();
             sw.stop();
             long time = sw.getTime();
             timings.add(time);
@@ -90,7 +90,7 @@ public class Start {
             stream.parallel()
                     .filter(x -> x % 2 == 0)
                     .map(x -> x * 2)
-                    .count();
+                    .max();
             sw.stop();
             long time = sw.getTime();
             timings.add(time);

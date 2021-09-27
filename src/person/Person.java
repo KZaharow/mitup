@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.Objects;
 
-public class Person implements Comparator<Person> {
+public class Person implements Comparable<Person> {
 
     private long id;
     private String name;
@@ -50,10 +50,6 @@ public class Person implements Comparator<Person> {
     }
 
 
-    @Override
-    public int compare(Person o1, Person o2) {
-        return o1.getName().compareTo(o2.getName());
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -68,5 +64,10 @@ public class Person implements Comparator<Person> {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, birthday);
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return name.compareTo(o.getName());
     }
 }

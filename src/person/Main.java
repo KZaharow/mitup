@@ -5,6 +5,7 @@ import org.apache.commons.lang.time.StopWatch;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -20,8 +21,8 @@ public class Main {
     private static final List<Person> p50000 = new PersonGenerator().generate(new ArrayList<>(), 50000L);
     private static final List<Person> p100000 = new PersonGenerator().generate(new ArrayList<>(), 100000L);
     private static final List<Person> p250000 = new PersonGenerator().generate(new ArrayList<>(), 250000L);
-    private static final List<Person> p500000 = new PersonGenerator().generate(new ArrayList<>(), 500000L);
-    private static final List<Person> p1000000 = new PersonGenerator().generate(new ArrayList<>(), 1000000L);
+    //private static final List<Person> p500000 = new PersonGenerator().generate(new ArrayList<>(), 500000L);
+    //private static final List<Person> p1000000 = new PersonGenerator().generate(new ArrayList<>(), 1000000L);
 
     private static final List<Person> p1000l = new PersonGenerator().generate(new LinkedList<>(), 1000L);
     private static final List<Person> p10000l = new PersonGenerator().generate(new LinkedList<>(), 10000L);
@@ -29,12 +30,12 @@ public class Main {
     private static final List<Person> p50000l = new PersonGenerator().generate(new LinkedList<>(), 50000L);
     private static final List<Person> p100000l = new PersonGenerator().generate(new LinkedList<>(), 100000L);
     private static final List<Person> p250000l = new PersonGenerator().generate(new LinkedList<>(), 250000L);
-    private static final List<Person> p500000l = new PersonGenerator().generate(new LinkedList<>(), 500000L);
-    private static final List<Person> p1000000l = new PersonGenerator().generate(new LinkedList<>(), 1000000L);
+    //private static final List<Person> p500000l = new PersonGenerator().generate(new LinkedList<>(), 500000L);
+    //private static final List<Person> p1000000l = new PersonGenerator().generate(new LinkedList<>(), 1000000L);
 
 
-    private static final List<List<Person>> tasks1 = Arrays.asList(p1000, p10000, p25000, p50000, p100000, p250000, p500000, p1000000);
-    private static final List<List<Person>> tasks2 = Arrays.asList(p1000l, p10000l, p25000l, p50000l, p100000l, p250000l, p500000l, p1000000l);
+    private static final List<List<Person>> tasks1 = Arrays.asList(p1000, p10000, p25000, p50000, p100000, p250000);
+    private static final List<List<Person>> tasks2 = Arrays.asList(p1000l, p10000l, p25000l, p50000l, p100000l, p250000l);
     private static final List<String> log = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
@@ -70,15 +71,16 @@ public class Main {
         for (int i = 0; i < 10; i++) {
             sw.reset();
             sw.start();
-            List<String> collect = t.stream()
-                    .map(person -> person.getName().toUpperCase())
+            t.stream()
                     .sorted()
-                    .collect(Collectors.toList());
+                    .map(person -> person.getName().toUpperCase())
+                    .filter(s -> s.startsWith("Person_0"))
+                    .distinct()
+                    .count();
             sw.stop();
             long time = sw.getTime();
             timings.add(time);
-            System.out.println(time);
-            log.add("Single-stream time [size=" + t.size() + "], " + time + " ms");
+            //log.add("Single-stream time [size=" + t.size() + "], " + time + " ms");
         }
         Double collect = timings.stream().collect(Collectors.averagingInt(x -> x.intValue()));
         log.add("Single stream avg test time (size=" + t.size() + "), " + collect + " ms");
@@ -92,15 +94,15 @@ public class Main {
             sw.reset();
             sw.start();
             t.stream()
-                    .map(person -> person.getName().toUpperCase())
-                    .parallel()
                     .sorted()
-                    .collect(Collectors.toList());
+                    .map(person -> person.getName().toUpperCase())
+                    .filter(s -> s.startsWith("Person_0"))
+                    .distinct()
+                    .count();
             sw.stop();
             long time = sw.getTime();
             timings.add(time);
-            System.out.println(time);
-            log.add("Parallel-stream time [size=" + t.size() + "], " + time + " ms");
+            //log.add("Parallel-stream time [size=" + t.size() + "], " + time + " ms");
         }
         Double collect = timings.stream().collect(Collectors.averagingInt(x -> x.intValue()));
         log.add("Parallel stream avg test time (size=" + t.size() + "), " + collect + " ms");
