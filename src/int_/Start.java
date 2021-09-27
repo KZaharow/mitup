@@ -13,7 +13,7 @@ import java.util.stream.IntStream;
 public class Start {
 
     private static final List<String> log = new ArrayList<>();
-    private static final int[] INIT = {1000, 10000, 25000, 50000, 100000, 250000, 500000, 1000000, Integer.MAX_VALUE / 1000};
+    private static final int[] INIT = {1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000, Integer.MAX_VALUE / 100};
 
     private static List<List<IntStream>> getTask(int[] arr) {
 
@@ -40,37 +40,37 @@ public class Start {
             testMaxIntStream(t);
         }
 
-        log.add("\ntestMaxIntStream");
+        log.add("\ntestMaxParallelIntStream");
         for (List<IntStream> t : getTask(INIT)) {
             testMaxParallelIntStream(t);
         }
 
-        log.add("\ntestMaxIntStream");
+        log.add("\ntestFilterIntStream");
         for (List<IntStream> t : getTask(INIT)) {
             testFilterIntStream(t);
         }
 
-        log.add("\ntestMaxIntStream");
+        log.add("\ntestFilterParallelIntStream");
         for (List<IntStream> t : getTask(INIT)) {
             testFilterParallelIntStream(t);
         }
 
-        log.add("\ntestMaxIntStream");
+        log.add("\ntestMapIntStream");
         for (List<IntStream> t : getTask(INIT)) {
             testMapIntStream(t);
         }
 
-        log.add("\ntestMaxIntStream");
+        log.add("\ntestMapParallelIntStream");
         for (List<IntStream> t : getTask(INIT)) {
             testMapParallelIntStream(t);
         }
 
-        log.add("\ntestMaxIntStream");
+        log.add("\ntestComplexIntStream");
         for (List<IntStream> t : getTask(INIT)) {
             testComplexIntStream(t);
         }
 
-        log.add("\ntestMaxIntStream");
+        log.add("\ntestComplexParallelIntStream");
         for (List<IntStream> t : getTask(INIT)) {
             testComplexParallelIntStream(t);
         }
